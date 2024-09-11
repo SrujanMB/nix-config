@@ -21,12 +21,20 @@
       };
 
       dev-vm = nixpkgs.lib.nixosSystem {
-              specialArgs = {inherit inputs;};
-              modules = [
-                ./hosts/dev-vm/configuration.nix
-                inputs.home-manager.nixosModules.default
-              ];
-            };
+         specialArgs = {inherit inputs;};
+         modules = [
+           ./hosts/dev-vm/configuration.nix
+           inputs.home-manager.nixosModules.default
+         ];
+       };
+
+      dev-vm-nogui = nixpkgs.lib.nixosSystem {
+         specialArgs = {inherit inputs;};
+         modules = [
+           ./hosts/dev-vm-nogui/configuration.nix
+           inputs.home-manager.nixosModules.default
+         ];
+       };
     };
   };
 }
