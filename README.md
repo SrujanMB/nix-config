@@ -15,6 +15,9 @@ More details about the configurations are stated below the usage instructions.
 
 > These instructions are made for myself but if you wish to try this config out for yourself then please consider forking this repo and changing the `nix-config/modules/home-manager/base/git.nix` config file **with your git details before executing any git commands!**.
 
+**Step 0:** Have a working NixOS installation (See: [Nix-Wiki Installation Guide](https://nixos.wiki/wiki/NixOS_Installation_Guide))
+> You should also have `git` and `vim` installed but you could use `nix-shell -p git` instead (if preferred).
+
 **Step 1:** Clone this repo to the home directory then cd into it:
 ```sh
 git clone https://github.com/SrujanMB/nix-config.git
