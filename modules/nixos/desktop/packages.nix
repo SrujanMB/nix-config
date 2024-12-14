@@ -13,10 +13,15 @@
     hyprlock
 
     # GUI Applications
-    alacritty
     discord
-    kdePackages.okular
     krita
+    blender
+    kdePackages.kdenlive
+
+    # GUI Utils
+    alacritty
+    kdePackages.okular
+    mpv
 
     # GUI code editors
     zed-editor
