@@ -31,6 +31,8 @@
     jetbrains-mono
     powerline-fonts
     powerline-symbols
-    (nerdfonts.override { fonts = [ "FiraCode" "NerdFontsSymbolsOnly" ]; })
+    nerd-fonts.fira_code
+    nerd-fonts._nerd_fonts_symbols_only
+    #(nerdfonts.override { fonts = [ "FiraCode" "NerdFontsSymbolsOnly" ]; })
   ];
 }
