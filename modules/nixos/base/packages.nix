@@ -20,6 +20,7 @@
 
     # Dev stuff
     gcc
+    nil
     nixd
     nodejs
     python3
