@@ -20,6 +20,7 @@
 
     # Dev stuff
     gcc
+    nixd
     nodejs
     python3
     dotnet-sdk_8
