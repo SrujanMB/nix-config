@@ -8,7 +8,11 @@
       "$terminal" = "alacritty";
       "$browser" = "brave";
 
-      monitor = ",preferred,auto,auto";
+      monitor = [
+        "eDP-1,preferred,auto,auto"
+        "DP-4,prefered,auto-left,auto,transform,1"
+        "DP-3,preferred,auto-left,auto"
+      ];
 
       exec-once = [
         "$browser"
