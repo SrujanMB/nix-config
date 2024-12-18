@@ -11,5 +11,6 @@
     ./hyprlock.nix
     ./audio.nix
     ./printing.nix
+    ./steam.nix
   ];
 }

@@ -17,11 +17,15 @@
     krita
     blender
     kdePackages.kdenlive
+    steam
+    lutris
 
     # GUI Utils
     alacritty
     kdePackages.okular
     mpv
+    wineWowPackages.stable
+    winetricks
 
     # GUI code editors
     zed-editor
