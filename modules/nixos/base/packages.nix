@@ -22,6 +22,7 @@
     gcc
     nil
     nixd
+    nixfmt-rfc-style
     nodejs
     python3
     dotnet-sdk_8
