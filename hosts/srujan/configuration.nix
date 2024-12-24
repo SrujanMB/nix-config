@@ -68,9 +68,9 @@
 
   # Extra config to add support for davinci resolve for my
   # laptop's integrated gpu:
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-compute-runtime
     ];
