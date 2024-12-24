@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -9,9 +10,10 @@
       let
         flakeDir = "~/nix-config";
         ezaExtraFlags = "--icons --hyperlink";
-      in {
+      in
+      {
         rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
-        update = "sudo nix flake update ${flakeDir}";
+        update = "sudo nix flake update --flake ${flakeDir}";
         upgrade = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
 
         ls = "eza ${ezaExtraFlags}";
@@ -19,14 +21,17 @@
         ll = "eza -lah ${ezaExtraFlags}";
 
         ff = "fastfetch";
-    };
+      };
 
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo"];
+      plugins = [
+        "git"
+        "sudo"
+      ];
       theme = "agnoster";
     };
   };
