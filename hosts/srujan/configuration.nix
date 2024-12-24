@@ -66,6 +66,16 @@
     # Add extra packages that you want here
   ];
 
+  # Extra config to add support for davinci resolve for my
+  # laptop's integrated gpu:
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      intel-compute-runtime
+    ];
+  };
+
   programs.gnupg.agent = {
     enable = true;
   # enableSSHSupport = true;
