@@ -14,22 +14,26 @@
 
     # GUI Applications
     discord
+    onlyoffice-bin
+
+    # GUI Creative Applications
+    gimp
     krita
     blender
+    inkscape
+    davinci-resolve
     kdePackages.kdenlive
-    steam
-    lutris
 
     # GUI Utils
+    mpv
     alacritty
     kdePackages.okular
-    mpv
-    wineWowPackages.stable
+    lutris
     winetricks
+    wineWowPackages.stable
 
     # GUI code editors
     zed-editor
-    onlyoffice-bin
 
     # Sound
     pipewire
