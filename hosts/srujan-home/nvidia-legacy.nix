@@ -5,6 +5,9 @@
   ...
 }:
 {
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
+
   # From https://nixos.wiki/wiki/Nvidia
   # Enable OpenGL
   hardware.graphics = {
@@ -47,3 +50,4 @@
     package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
   };
 }
+

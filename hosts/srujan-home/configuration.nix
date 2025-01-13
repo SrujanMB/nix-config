@@ -75,7 +75,7 @@
   # or visit: https://search.nixos.org/packages
 
   environment.systemPackages = with pkgs; [
-    cudaPackages.cudatoolkit
+    #cudaPackages.cudatoolkit
   ];
 
   programs.gnupg.agent = {
