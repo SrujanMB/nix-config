@@ -55,7 +55,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.srujan = {
     isNormalUser = true;
-    description = "Dev-VM";
+    description = "Srujan";
     extraGroups = [
       "networkmanager"
       "wheel"
