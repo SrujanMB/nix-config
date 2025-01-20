@@ -17,6 +17,11 @@
 
   # Set your hostname / default profile:
   networking.hostName = "dev-vm-nogui";
+  
+  networking.interfaces.ens33.ipv4.addresses = [ {
+    address = "192.168.1.207";
+    prefixLength = 24;
+  } ];
 
   # Set your time zone.
   time.timeZone = "Pacific/Auckland";
