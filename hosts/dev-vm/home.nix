@@ -11,6 +11,9 @@
   home.username = "srujan";
   home.homeDirectory = "/home/srujan";
 
+  # Insert Git GPG Key ID Here:
+  programs.git.signing.key = "";
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -28,7 +31,7 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {};
+  home.file = { };
 
   home.sessionVariables = {
     # EDITOR = "emacs";
