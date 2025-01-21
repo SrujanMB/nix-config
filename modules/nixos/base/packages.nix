@@ -28,6 +28,8 @@
     dotnet-sdk_8
     dotnet-runtime_8
     dotnet-aspnetcore_8
+    temurin-bin
+    maven
   ];
 
   fonts.packages = with pkgs; [
