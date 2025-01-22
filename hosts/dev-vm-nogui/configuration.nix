@@ -16,12 +16,17 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Set your hostname / default profile:
-  networking.hostName = "dev-vm-nogui";
-  
-  networking.interfaces.ens33.ipv4.addresses = [ {
-    address = "192.168.1.207";
-    prefixLength = 24;
-  } ];
+  networking.hostName = "dev-vm-nogui"; 
+    networking.interfaces.ens33 = {
+    useDHCP = false;
+    ipv4.addresses = [ {
+      address = "192.168.1.207";
+      prefixLength = 24;
+    } ];
+  };
+
+  networking.defaultGateway = "192.168.1.1";
+  networking.nameservers = [ "192.168.1.1" "8.8.8.8" ];
 
   # Set your time zone.
   time.timeZone = "Pacific/Auckland";
