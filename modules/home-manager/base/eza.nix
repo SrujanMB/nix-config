@@ -9,4 +9,5 @@
       "--group-directories-first"
       "--hyperlink"
       ];
+  };
 }
