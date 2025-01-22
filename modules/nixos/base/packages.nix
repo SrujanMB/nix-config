@@ -1,7 +1,10 @@
-{ pkgs, ...}: {
+{ pkgs, inputs, ...}: {
   nixpkgs.config = {
     allowUnfree = true;
   };
+  
+  # Used by nixd to fetch packages based on the flake version:
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   environment.systemPackages = with pkgs; [
     # Utils:
