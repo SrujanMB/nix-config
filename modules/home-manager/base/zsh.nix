@@ -9,7 +9,7 @@
     shellAliases =
       let
         flakeDir = "~/nix-config";
-        ezaExtraFlags = "--icons --hyperlink";
+        ezaExtraFlags = "--icons --hyperlink --group-directories-first";
       in
       {
         rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
