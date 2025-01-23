@@ -7,8 +7,9 @@
     ./treesitter.nix
     ./other-plugins.nix
     ./mini.nix
-     ./autopairs.nix
-     ./git-signs.nix
-     ./which-key.nix
+    ./autopairs.nix
+    ./git-signs.nix
+    ./which-key.nix
+    ./conform.nix
   ];
 }
