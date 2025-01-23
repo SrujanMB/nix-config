@@ -6,5 +6,6 @@
     ./nvim-cmp.nix
     ./treesitter.nix
     ./other-plugins.nix
+    ./mini.nix
   ];
 }
