@@ -1,4 +1,4 @@
- # Show line Number0
+# Show line Number0
 {
   imports = [
     ./lsp.nix
@@ -11,5 +11,6 @@
     ./git-signs.nix
     ./which-key.nix
     ./conform.nix
+    ./debugger.nix
   ];
 }
