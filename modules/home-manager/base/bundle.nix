@@ -4,5 +4,6 @@
     ./zellij.nix
     ./git.nix
     ./zsh.nix
+    ./lf.nix
   ];
 }

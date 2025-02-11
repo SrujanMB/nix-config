@@ -1,0 +1,67 @@
+{ pkgs, config, ... }:
+{
+  # You can get the icon file using:
+  # nix run nixpkgs#wget -- "https://raw.githubusercontent.com/gokcehan/lf/master/etc/icons.example" -O lf-icons
+  xdg.configFile."lf/icons".source = ./lf-icons;
+
+  # Adapted from: https://github.com/vimjoyer/lf-nix-video
+  programs.lf = {
+    enable = true;
+    settings = {
+      preview = true;
+      hidden = true;
+      icons = true;
+      drawbox = true;
+      ignorecase = true;
+    };
+
+    commands = {
+      editor-open = ''$$EDITOR $f'';
+
+      mkdir = ''
+        ''${{
+        printf "Directory Name:"
+        read DIR
+        mkdir $DIR
+        }}
+      '';
+    };
+
+    keybindings = {
+      o = "";
+      c = "mkdir";
+      "." = "set hidden!";
+      "<enter>" = "open";
+
+      ee = "editor-open";
+      V = ''$${pkgs.bat}/bin/bat --paging=always --theme=gruvbox "$f"'';
+    };
+
+    extraConfig =
+      let
+        previewer = pkgs.writeShellScriptBin "pv.sh" ''
+          file=$1
+          w=$2
+          h=$3
+          x=$4
+          y=$5
+          # Uses the kitty image protocol which works with wezterm too
+          # I currently do not use these terminal emulators but its here
+          # for potential future use which may never happen...
+          if [[ "$( ${pkgs.file}/bin/file -Lb --mime-type "$file")" =~ ^image ]]; then
+              ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
+              exit 1
+          fi
+
+          ${pkgs.pistol}/bin/pistol "$file"
+        '';
+        cleaner = pkgs.writeShellScriptBin "clean.sh" ''
+          ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+        '';
+      in
+      ''
+        set cleaner ${cleaner}/bin/clean.sh
+        set previewer ${previewer}/bin/pv.sh
+      '';
+  };
+}
