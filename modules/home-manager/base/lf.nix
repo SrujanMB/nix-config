@@ -4,6 +4,11 @@
   # nix run nixpkgs#wget -- "https://raw.githubusercontent.com/gokcehan/lf/master/etc/icons.example" -O lf-icons
   xdg.configFile."lf/icons".source = ./lf-icons;
 
+  home.sessionVariables = {
+    PISTOL_CHROMA_FORMATTER = "terminal256";
+    PISTOL_CHROMA_STYLE = "onedark";
+  };
+
   # Adapted from: https://github.com/vimjoyer/lf-nix-video
   programs.lf = {
     enable = true;
@@ -34,7 +39,7 @@
       "<enter>" = "open";
 
       ee = "editor-open";
-      V = ''$${pkgs.bat}/bin/bat --paging=always --theme=gruvbox "$f"'';
+      V = ''''$${pkgs.bat}/bin/bat --paging=always --theme=base16 "$f"'';
     };
 
     extraConfig =
