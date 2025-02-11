@@ -6,6 +6,11 @@
 
     settings = {
       theme = "tokyo-night";
+      ui = {
+        pane_frames = {
+          rounded_corners = true;
+        };
+      };
     };
   };
 }
