@@ -10,6 +10,11 @@
       dap-go = {
         enable = true;
       };
+
+      dap-lldb = {
+        enable = true;
+      };
+
       # Creates a beautiful debugger UI
       dap-ui = {
         enable = true;
