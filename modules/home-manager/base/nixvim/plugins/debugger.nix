@@ -1,9 +1,9 @@
 {
   programs.nixvim = {
     plugins = {
-      dap = {
-        enable = true;
-      };
+      dap.enable = true;
+      dap-virtual-text.enable = true;
+      cmp-dap.enable = true;
 
       # Add your own debuggers here
       # TODO: Add C, C#, Java and other debuggers:
