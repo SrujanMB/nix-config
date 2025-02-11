@@ -1,4 +1,4 @@
-{ inputs, ...}:
+{ inputs, ... }:
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
@@ -9,15 +9,14 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    
+
     colorschemes = {
-      
-      tokyonight = {
+      onedark = {
         enable = true;
-	
-	settings = {
-	  style = "night";
-	};
+
+        settings = {
+          style = "darker";
+        };
       };
     };
 
@@ -30,16 +29,15 @@
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
       have_nerd_font = false;
-    }; 
+    };
 
     opts = {
       # Show line Numbers
       number = true;
       relativenumber = true;
-      
+
       # Show which line your cursor is on
       cursorline = true;
-
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
@@ -58,7 +56,6 @@
         #  Remove this option if you want your OS clipboard to remain independent.
         register = "unnamedplus";
       };
-
 
       # Enable break indent
       breakindent = true;
@@ -94,7 +91,7 @@
       # Preview subsitutions live, as you type!
       inccommand = "split";
 
-            # Minimal number of screen lines to keep above and below the cursor
+      # Minimal number of screen lines to keep above and below the cursor
       scrolloff = 10;
 
       # See `:help hlsearch`

@@ -5,7 +5,7 @@
     enableZshIntegration = true;
 
     settings = {
-      theme = "tokyo-night";
+      theme = "onedark";
       ui = {
         pane_frames = {
           rounded_corners = true;
