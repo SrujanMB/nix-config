@@ -1,19 +1,20 @@
 {
   programs.nixvim = {
-    # Shows how to use the DAP plugin to debug your code.
-    #
-    # Primarily focused on configuring the debugger for Go, but can
-    # be extended to other languages as well. That's why it's called
-    # kickstart.nixvim and not kitchen-sink.nixvim ;)
-    # https://nix-community.github.io/nixvim/plugins/dap/index.html
-    plugins.dap = {
-      enable = true;
+    plugins = {
+      dap = {
+        enable = true;
+      };
 
-      extensions = {
-        # Creates a beautiful debugger UI
-        dap-ui = {
-          enable = true;
+      # Add your own debuggers here
+      # TODO: Add C, C#, Java and other debuggers:
+      dap-go = {
+        enable = true;
+      };
+      # Creates a beautiful debugger UI
+      dap-ui = {
+        enable = true;
 
+        settings = {
           # Set icons to characters that are more likely to work in every terminal.
           # Feel free to remove or use ones that you like more! :)
           # Don't feel like these are good choices.
@@ -36,12 +37,6 @@
               disconnect = "⏏";
             };
           };
-        };
-
-        # Add your own debuggers here
-        # TODO: Add C, C#, Java and other debuggers:
-        dap-go = {
-          enable = true;
         };
       };
     };
@@ -142,5 +137,6 @@
       require('dap').listeners.before.event_terminated['dapui_config'] = require('dapui').close
       require('dap').listeners.before.event_exited['dapui_config'] = require('dapui').close
     '';
+
   };
 }
