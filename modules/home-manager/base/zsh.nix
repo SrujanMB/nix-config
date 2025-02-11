@@ -20,6 +20,9 @@
         la = "eza -a ${ezaExtraFlags}";
         ll = "eza -lah ${ezaExtraFlags}";
 
+        # Use lf to go to a directory after exit:
+        lfcd = ''cd "$(command lf -print-last-dir "$@")"'';
+
         ff = "fastfetch";
       };
 
