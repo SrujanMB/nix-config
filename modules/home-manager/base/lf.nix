@@ -30,6 +30,15 @@
         mkdir $DIR
         }}
       '';
+
+      # Git stuff from lf wiki: https://github.com/gokcehan/lf/wiki/Integrations#git
+      git_branch = ''
+        ''${{
+        git branch | fzf | xargs git checkout
+        pwd_shell="$(pwd | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id updir; cd \"$pwd_shell\""
+        }}
+      '';
     };
 
     keybindings = {
@@ -40,6 +49,13 @@
 
       ee = "editor-open";
       V = ''''$${pkgs.bat}/bin/bat --paging=always --theme=base16 "$f"'';
+
+      # Git stuff
+      gb = ":git_branch";
+      "gp" = ''$clear; git pull --rebase || true; echo "Press ENTER"; read ENTER'';
+      "gs" = ''$clear; git status; echo "Press ENTER"; read ENTER'';
+      "gl" =
+        ''$clear; git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit'';
     };
 
     extraConfig =
