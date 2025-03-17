@@ -31,6 +31,11 @@
         }}
       '';
 
+      on-select = ''
+        &{{
+            lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+        }}'';
+
       # Git stuff from lf wiki: https://github.com/gokcehan/lf/wiki/Integrations#git
       git_branch = ''
         ''${{
