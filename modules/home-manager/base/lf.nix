@@ -14,7 +14,7 @@
     enable = true;
     settings = {
       preview = true;
-      hidden = true;
+      hidden = false;
       icons = true;
       drawbox = true;
       ignorecase = true;
