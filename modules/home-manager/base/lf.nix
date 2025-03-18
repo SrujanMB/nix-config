@@ -71,15 +71,25 @@
           h=$3
           x=$4
           y=$5
+          mime=$(${pkgs.file}/bin/file -Lb --mime-type "$file")
+          batFlags=" --paging=always --color=always --theme=base16 --terminal-width $(($w - 3))"
+
           # Uses the kitty image protocol which works with wezterm too
-          # I currently do not use these terminal emulators but its here
-          # for potential future use which may never happen...
-          if [[ "$( ${pkgs.file}/bin/file -Lb --mime-type "$file")" =~ ^image ]]; then
+          #echo $mime
+          if [[ $mime =~ ^image ]]; then
               ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
               exit 1
+          elif [[ $mime =~ ^text|json ]]; then
+              # Extra json type as bat does not highlight unknown filetypes.
+              if [[ $mime =~ json ]]; then
+                 batFlags+=" --language json"
+
+              fi
+              ${pkgs.bat}/bin/bat $batFlags "$file"
+          else
+              ${pkgs.pistol}/bin/pistol "$file"
           fi
 
-          ${pkgs.pistol}/bin/pistol "$file"
         '';
         cleaner = pkgs.writeShellScriptBin "clean.sh" ''
           ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
