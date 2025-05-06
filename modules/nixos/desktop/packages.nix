@@ -19,16 +19,14 @@
     # GUI Creative Applications
     gimp
     krita
-    blender
     inkscape
-    davinci-resolve
+    #davinci-resolve
     kdePackages.kdenlive
 
     # GUI Utils
     mpv
     alacritty
     kdePackages.okular
-    lutris
     winetricks
     wineWowPackages.stable
 
@@ -47,6 +45,7 @@
 
     # Games :P
     osu-lazer-bin
+    lutris
   ];
 
   fonts.packages = with pkgs; [

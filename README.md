@@ -34,7 +34,7 @@ cp /etc/nixos/hardware-configuration.nix \
 
 **Step 3:** Build / Test nix configuration:
 ```sh
-sudo nixos-rebuild --flake ".#{hostname-or-profile}*" switch
+sudo nixos-rebuild --flake ".#{hostname-or-profile}*" switch --install-bootloader
 ```
 
 **Step 4:** Commit & push changes to the hardware-configuration.nix.
