@@ -34,6 +34,8 @@
 
           nix = [ "nixfmt" ];
 
+          ruby = [ "rubyfmt" ];
+
           javascript = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";

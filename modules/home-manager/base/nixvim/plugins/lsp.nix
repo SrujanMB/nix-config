@@ -57,6 +57,10 @@
           filetypes = [ ".nix" ];
         };
 
+        ruby_lsp ={
+          enable = true;
+        };
+
         lua_ls = {
           enable = true;
 
