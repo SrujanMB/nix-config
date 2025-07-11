@@ -17,10 +17,10 @@
 
   # Set your hostname / default profile:
   networking.hostName = "dev-vm-nogui"; 
-    networking.interfaces.ens33 = {
+    networking.interfaces.ens18 = {
     useDHCP = false;
     ipv4.addresses = [ {
-      address = "192.168.1.207";
+      address = "192.168.1.64";
       prefixLength = 24;
     } ];
   };
