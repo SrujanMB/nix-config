@@ -11,7 +11,7 @@
   home.homeDirectory = "/home/srujan";
 
   # Insert Git GPG Key ID Here:
-  programs.git.signing.key = "924FE434BA54015D";
+  programs.git.signing.key = "0DC17939EB4EA479";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
