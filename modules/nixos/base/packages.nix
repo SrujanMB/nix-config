@@ -28,6 +28,8 @@
     nixfmt-rfc-style
     nodejs
     python3
+    ruby
+    rubyfmt
     dotnet-sdk_8
     dotnet-runtime_8
     dotnet-aspnetcore_8
