@@ -29,7 +29,16 @@
     nodejs
     python3
     ruby
+    libyaml
+    bundler
+    sqlite
+    zlib
+    readline
+    libxml2
+    libxslt
+    openssl
     rubyfmt
+    rails-new
     rubyPackages.rails
     gnumake
     libyaml
