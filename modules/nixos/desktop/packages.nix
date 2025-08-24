@@ -32,6 +32,7 @@
 
     # GUI code editors
     zed-editor
+    vscode-fhs
 
     # Sound
     pipewire
