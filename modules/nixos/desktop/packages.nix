@@ -15,6 +15,7 @@
     # GUI Applications
     discord
     onlyoffice-bin
+    parsec-bin
 
     # GUI Creative Applications
     gimp
