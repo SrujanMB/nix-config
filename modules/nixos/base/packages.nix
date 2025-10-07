@@ -1,8 +1,9 @@
-{ pkgs, inputs, ...}: {
+{ pkgs, inputs, ... }:
+{
   nixpkgs.config = {
     allowUnfree = true;
   };
-  
+
   # Used by nixd to fetch packages based on the flake version:
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
@@ -20,6 +21,9 @@
     tree
     btop
     fastfetch
+    openvpn
+    networkmanager
+    networkmanager-openvpn
 
     # Dev stuff
     gcc
