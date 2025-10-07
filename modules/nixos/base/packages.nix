@@ -22,8 +22,6 @@
     btop
     fastfetch
     openvpn
-    networkmanager
-    networkmanager-openvpn
 
     # Dev stuff
     gcc
