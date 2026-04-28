@@ -16,17 +16,19 @@
     discord
     onlyoffice-bin
     parsec-bin
+    vivaldi
 
     # GUI Creative Applications
     gimp
     krita
     inkscape
-    #davinci-resolve
+    davinci-resolve
     kdePackages.kdenlive
 
     # GUI Utils
     mpv
     alacritty
+    xournalpp
     kdePackages.okular
     winetricks
     wineWowPackages.stable
@@ -39,6 +41,7 @@
     pipewire
     pulseaudio
     pamixer
+    easyeffects
 
     # Other
     pavucontrol

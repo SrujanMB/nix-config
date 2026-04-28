@@ -9,7 +9,7 @@
       "$browser" = "brave";
 
       monitor = [
-        "eDP-1,preferred,auto,auto"
+        "eDP-1,preferred,auto,1"
         "DP-4,prefered,auto-left,auto,transform,1"
         "DP-3,preferred,auto-left,auto"
       ];
@@ -89,19 +89,17 @@
         preserve_split = true;
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_invert = true;
-        workspace_swipe_distance = 275;
-        workspace_swipe_forever = false;
-      };
+      # New gesture syntax (Hyprland 0.51+)
+      # gesture = [fingers, direction, action, options]
+      # For 3-finger horizontal workspace switching
+      gesture = [
+        "3, horizontal, workspace"
+      ];
 
       misc = {
         animate_manual_resizes = false;
         animate_mouse_windowdragging = false;
         enable_swallow = true;
-        render_ahead_of_time = false;
         disable_hyprland_logo = false;
       };
 
