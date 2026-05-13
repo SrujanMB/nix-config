@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./amdgpu-params.nix
       ../../modules/nixos/base/bundle.nix
       ../../modules/nixos/desktop/bundle.nix
       inputs.home-manager.nixosModules.default

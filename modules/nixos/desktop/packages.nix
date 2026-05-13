@@ -14,7 +14,7 @@
 
     # GUI Applications
     discord
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     parsec-bin
     vivaldi
 
@@ -47,6 +47,9 @@
     pavucontrol
     brightnessctl
     networkmanagerapplet
+    mesa-demos
+    vulkan-tools
+    radeontop
 
     # Games :P
     osu-lazer-bin
@@ -55,7 +58,7 @@
 
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     font-awesome
     twemoji-color-font
   ];
