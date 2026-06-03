@@ -28,6 +28,7 @@
     nil
     nixd
     nixfmt-rfc-style
+    cloudflared
     nodejs
     python3
     ruby

@@ -1,4 +1,5 @@
-{ pkgs, ...}: {
+{ pkgs, ... }:
+{
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -53,7 +54,6 @@
 
     # Games :P
     osu-lazer-bin
-    lutris
   ];
 
   fonts.packages = with pkgs; [
