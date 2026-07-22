@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./amdgpu-params.nix
+      ./intel-video.nix
       ../../modules/nixos/base/bundle.nix
       ../../modules/nixos/desktop/bundle.nix
       inputs.home-manager.nixosModules.default
@@ -19,6 +20,11 @@
 
   # Set your hostname / default profile:
   networking.hostName = "srujan";
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ hplipWithPlugin ];
+  };
 
   # Set your time zone.
   time.timeZone = "Pacific/Auckland";

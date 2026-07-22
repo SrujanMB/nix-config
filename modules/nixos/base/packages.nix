@@ -12,6 +12,7 @@
     vim
     neovim
     git
+    chezmoi
     wget
     jq
     lf
@@ -27,7 +28,7 @@
     gcc
     nil
     nixd
-    nixfmt-rfc-style
+    nixfmt
     cloudflared
     nodejs
     python3
@@ -45,9 +46,9 @@
     rubyPackages.rails
     gnumake
     libyaml
-    dotnet-sdk_8
-    dotnet-runtime_8
-    dotnet-aspnetcore_8
+    dotnet-sdk_10
+    dotnet-runtime_10
+    dotnet-aspnetcore_10
     temurin-bin
     maven
   ];

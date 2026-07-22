@@ -8,8 +8,7 @@
     ./sddm.nix
     ./open-tablet-driver.nix
     ./kde-plasma6.nix
-    ./hyprland.nix
-    ./hyprlock.nix
+    ./niri.nix
     ./audio.nix
     ./printing.nix
     ./steam.nix

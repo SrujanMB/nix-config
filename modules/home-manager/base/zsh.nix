@@ -8,10 +8,14 @@
 
     shellAliases =
       let
+        chezmoiDir = "$HOME/nix-config/dotfiles";
         flakeDir = "~/nix-config";
         ezaExtraFlags = "--icons=always --hyperlink --group-directories-first";
       in
       {
+        chezmoi = "chezmoi -S ${chezmoiDir}";
+        cm = "chezmoi -S ${chezmoiDir}";
+
         rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
         update = "sudo nix flake update --flake ${flakeDir}";
         upgrade = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";

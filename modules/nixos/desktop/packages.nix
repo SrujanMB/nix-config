@@ -31,8 +31,8 @@
     alacritty
     xournalpp
     kdePackages.okular
-    winetricks
-    wineWowPackages.stable
+    #winetricks
+    #wineWow64Packages.stable
 
     # GUI code editors
     zed-editor
