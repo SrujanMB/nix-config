@@ -25,6 +25,7 @@
     openvpn
 
     # Dev stuff
+    gh
     gcc
     nil
     nixd
@@ -49,6 +50,7 @@
     dotnet-sdk_10
     dotnet-runtime_10
     dotnet-aspnetcore_10
+    roslyn-ls
     temurin-bin
     maven
   ];
